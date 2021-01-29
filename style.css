@@ -1,0 +1,247 @@
+/*  orange color: #e67e22*/
+
+:root{
+
+    --primary-color:#e67e22;
+}
+
+/*-----------------------------------------*/
+/* Basic setup*/
+/*------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/*-----------------------------------------*/
+/* Resubale component*/
+/*------------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/*-------------Heading---------------------*/
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 220%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+/*----------------------------------------------*/
+/*----------------------- BUTTON-----------------*/
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    border: 1px #e67e22 solid;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.btn-full{
+    background-color: #e67e22;
+    color: #fff;
+
+}
+.btn-ghost{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn-full:hover{
+    background-color: #bf6516;
+    color: #fff;
+}
+.btn-ghost:hover{
+    background-color: #bf6516;
+    color: #fff;
+}
+
+/*------------------HEADER-----------------------------------------*/
+
+/* we used linear gradient for the transparent of the color and*/
+/* and it cover upper of the img*/
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.644),rgba(0, 0, 0, 0.644)),url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /* content will be come in the mid of the section*/
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    margin: 20px;
+    float: left;
+}
+.main-nav {
+    padding: 8px 8px;
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left:40px ;
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.main-nav li  a:hover{
+    border-bottom: 2px solid var(--primary-color) ;
+}
+.hero-text-box a:last-child(0){
+    margin-left: 20px;
+}
+
+.btn-full {
+    background-color: #e67e22; 
+    color: #fff;
+    margin-right: 20px; /*this is used for the space between of the btn*/
+}
+
+
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin: 30px auto;
+}
+.features .features1{
+     width:300px;
+     height: 400px;
+     background-color: #fff;
+     display: inline-block;
+}
+
+
+.features {
+    text-align: center;
+
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+h4{
+        font-size: 110%;
+        margin-bottom: 15px;
+        font-weight: 300;
+}
+.get-food h2{
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.get-food h2::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background: #e67e22;
+    left: 46%;
+    bottom: -35%;
+    display: none;
+}
+.get-food:hover  h2::before{
+    display: block;
+
+}
+
+.features2 span{
+   font-size: 50px;
+   color: #e67e22;
+}
+
+.get-food{
+    padding:80px 0px;
+    
+}
+.get-food-header{  
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 180%;
+    word-spacing: 1px;
+    font-weight: 300;
+}
+.features-heading{
+    font-size: 30px;
+    padding-top: 30px;
+    box-shadow: 1px black;
+}
+.features2:hover{
+    box-shadow: 0px 0px 6px rgba(245, 210, 10, 0.651);
+}
+
+.features .features2 {
+    width: 300px;
+    /* height: 400px; */
+    background-color: #fff;
+    display: inline-block;
+    margin: 5px;
+    padding: 25px;
+}
+
+/*------Meals section--------------*/
+
+.section-meal{
+    margin-top: 40px;
+}
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden; /*it used for img overflow og the img*/
+    background-color: #000;
+}
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15); /* Here it used for the removing of the space btw photos*/
+    transition: transform 0.5s,opacity 0.5s;
+}
+.meal-photo img:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    overflow: hidden;
+}
